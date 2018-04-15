@@ -97,22 +97,22 @@ class Blockchain {
 }
 
 
-let bitcoin = new Blockchain();
-bitcoin.createTransaction(new Transaction('address1', 'address2', 100));
-bitcoin.createTransaction(new Transaction('address2', 'address1', 30));
+let beiChrisCoin = new Blockchain();
+beiChrisCoin.createTransaction(new Transaction('address1', 'address2', 100));
+beiChrisCoin.createTransaction(new Transaction('address2', 'address1', 30));
 
 console.log('Starting the miner');
-bitcoin.minePendingTransactions('chrisAdresse');
+beiChrisCoin.minePendingTransactions('chrisAdresse');
 
-console.log('Chriss Balance is', bitcoin.getBalanceOfAdress('chrisAdresse'));
+console.log('Chriss Balance is', beiChrisCoin.getBalanceOfAdress('chrisAdresse'));
 
 console.log('Starting mining again');
 
-bitcoin.minePendingTransactions('chrisAdresse');
+beiChrisCoin.minePendingTransactions('chrisAdresse');
 
-bitcoin.chain[1].transactions[0].amount = 300;
+beiChrisCoin.chain[1].transactions[0].amount = 300;
 
-console.log('Chriss Balance is', bitcoin.getBalanceOfAdress('chrisAdresse'));
-console.log('Address1 Balance is', bitcoin.getBalanceOfAdress('address1'));
-console.log('Address2 Balance is', bitcoin.getBalanceOfAdress('address2'));
-console.log(`Is blockchain valid ${bitcoin.isChainValid()}`);
+console.log('Chriss Balance is', beiChrisCoin.getBalanceOfAdress('chrisAdresse'));
+console.log('Address1 Balance is', beiChrisCoin.getBalanceOfAdress('address1'));
+console.log('Address2 Balance is', beiChrisCoin.getBalanceOfAdress('address2'));
+console.log(`Is blockchain valid ${beiChrisCoin.isChainValid()}`);
