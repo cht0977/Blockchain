@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 
-const connection = new Sequelize('blockchain', 'postgres', '', {
+const connection = new Sequelize('blockchain', 'postgres', 'password', {
     host: 'localhost',
     dialect: 'postgres',
     pool: {
